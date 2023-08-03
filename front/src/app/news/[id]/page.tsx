@@ -28,13 +28,13 @@ const Detail = () => {
       <div className="mt-8">
         <h3 className="text-2xl font-bold mb-4">Comentarios</h3>
         <div className="bg-gray-100 p-4 rounded-lg">
-          <p className="text-gray-800">Usuario1 dice:</p>
+          <p className="text-gray-800 font-bold">Usuario1</p>
           <p className="text-gray-600">
             ¡Excelente noticia! Gracias por compartirla.
           </p>
         </div>
         <div className="bg-gray-100 p-4 mt-4 rounded-lg">
-          <p className="text-gray-800">Usuario2 dice:</p>
+          <p className="text-gray-800 font-bold">Usuario2</p>
           <p className="text-gray-600">
             Interesante, ¿tienen más información al respecto?
           </p>
