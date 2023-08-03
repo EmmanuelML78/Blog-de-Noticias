@@ -1,12 +1,13 @@
 "use client";
 
 import { useGetNewsByIdQuery } from "@/redux/services/newsApi";
+import Loading from "@/components/loading";
 
 const Detail = () => {
-  const { data, isLoading, isError } = useGetNewsByIdQuery("6");
+  const { data, isLoading, isError } = useGetNewsByIdQuery("8");
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {
@@ -17,7 +18,7 @@ const Detail = () => {
     return <div>Article not found</div>;
   }
 
-  const { id, title, content, image } = data;
+  const { title, content, image } = data;
 
   return (
     <div className="max-w-lg mx-auto bg-white rounded shadow-lg p-8 mt-8">
