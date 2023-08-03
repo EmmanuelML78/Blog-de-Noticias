@@ -15,8 +15,9 @@ function page() {
       <div className="p-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {data?.map((news) => (
           <Link
-            href="/details/[id]"
-            as={`/details/${news.id}`}
+            href="/news/[id]"
+            passHref
+            as={`/news/${news.id}`}
             key={news.id}
             className="text-decoration-none">
             <div className="bg-white rounded-lg shadow-lg cursor-pointer">
