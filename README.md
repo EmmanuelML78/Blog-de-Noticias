@@ -28,6 +28,13 @@ Reemplaza: `DB_USER` , `DB_PASSWORD` , `DB_PORT`, `PORT`, `SECRET_KEY` con tus d
 
 ---
 
+1. Dentro de `./front` crea una archivo .env.local con sus credenciales como se muestra a continuacion
+
+```
+NEXT_PUBLIC_BACKEND_URL= poner la ruta del backend
+NEXTAUTH_SECRET= generar una clave secreta
+```
+
 ---
 
 ## Instalación ✔️✔️
