@@ -2,7 +2,7 @@
 
 ---
 
-![BN ](https://res.cloudinary.com/dd5jlib2e/image/upload/v1691076708/Captura_de_pantalla_41_qchgm9.png)
+![BN ]([https://res.cloudinary.com/dd5jlib2e/image/upload/v1691076708/Captura_de_pantalla_41_qchgm9.png](https://res.cloudinary.com/dd5jlib2e/image/upload/v1694203176/Captura45_wprg7j.png))
 
 ---
 
