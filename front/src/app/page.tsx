@@ -16,7 +16,6 @@ function page() {
         {data?.map((news) => (
           <Link
             href="/news/[id]"
-            passHref
             as={`/news/${news.id}`}
             key={news.id}
             className="text-decoration-none">

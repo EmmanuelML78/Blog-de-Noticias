@@ -31,16 +31,7 @@ export const registerUser = async (req: Request, res: Response) => {
       password: hashedPassword,
     });
 
-    // Generar el token
-    const token: string = jwt.sign(
-      { userId: newUser.id, email: newUser.email },
-      process.env.SECRET_KEY as string
-    );
-
-    // Agregar el token al encabezado y enviar la respuesta
-    res
-      .header("token", token)
-      .json({ token, user: newUser, message: "User registered successfully" });
+    res.json({ token, user: newUser, message: "User registered successfully" });
   } catch (error) {
     console.error("Error registering user:", error);
     return res.status(500).json({ error: "Internal Server Error" });

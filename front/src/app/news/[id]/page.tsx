@@ -3,8 +3,8 @@
 import { useGetNewsByIdQuery } from "@/redux/services/newsApi";
 import Loading from "@/components/loading";
 
-const Detail = () => {
-  const { data, isLoading, isError } = useGetNewsByIdQuery("8");
+function Detail({ params }: { params: { id: string } }) {
+  const { data, isLoading, isError } = useGetNewsByIdQuery(params.id);
 
   if (isLoading) {
     return <Loading />;
@@ -43,6 +43,6 @@ const Detail = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Detail;

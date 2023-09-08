@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Providers } from "@/redux/provider";
 import Navbar from "@/components/nav";
+import SessionAuthProvider from "@/context/SessionAuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,8 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <Providers>{children}</Providers>
+        <Providers>
+          <SessionAuthProvider>
+            <Navbar />
+            {children}
+          </SessionAuthProvider>
+        </Providers>
         <ToastContainer
           position="bottom-right"
           autoClose={5000}

@@ -28,11 +28,7 @@ export const createComment = async (req: Request, res: Response) => {
   try {
     // First, create the new comment
     const newComment = await Comment.create({ content, newsId, userId });
-
-    // Next, find the associated user to include it in the response
     const user = await User.findByPk(userId);
-
-    // Optionally, if you want to include the associated news as well, you can do:
     const news = await News.findByPk(newsId);
 
     return res.status(201).json({ newComment, user, news });
